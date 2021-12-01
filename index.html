@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html xml:lang="pt-br" lang="pt-BR" xmlns:fb="http://ogp.me/ns/fb#">
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"6a5485b2c2",applicationID:"625018719"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <link href="data:image/jpeg;base64,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" rel="shortcut icon" title="Favicon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+                    <title>Trabalho de Historia</title>
+                
+    <!-- Meta tags --> 
+        <meta name="description" content="Clique no link e tenha acesso a informações sobre o Segundo Reinado, período que se estendeu de 1840 a 1889 e no qual D. Pedro II era o imperador do Brasil. " />
+        
+        <meta name="keywords" content="" />
+        <meta http-equiv="content-language" content="pt-br"/>
+    
+    <!-- Metas FB e twitter --> 
+    <meta property="og:locale" content="pt_BR" />
+        <meta property="og:title" content="Segundo Reinado: fases, política, economia, resumo - Brasil Escola" />
+    <meta property="twitter:title" content="Segundo Reinado: fases, política, economia, resumo - Brasil Escola" />
+            <meta name="og:description" content="Clique no link e tenha acesso a informações sobre o Segundo Reinado, período que se estendeu de 1840 a 1889 e no qual D. Pedro II era o imperador do Brasil.">
+    <meta property="twitter:description" content="Clique no link e tenha acesso a informações sobre o Segundo Reinado, período que se estendeu de 1840 a 1889 e no qual D. Pedro II era o imperador do Brasil." />
+        <meta property="og:site_name" content="Brasil Escola" />
+    <meta property="og:url" content="https://brasilescola.uol.com.br/historiab/segundo-reinado.htm" />
+	    <meta property="og:image" content="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/1-d-pedro-ii.jpg" />
+    
+    <!-- Twitter tags for big card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/1-d-pedro-ii.jpg" />
+        
+    <link rel="canonical" href="https://brasilescola.uol.com.br/historiab/segundo-reinado.htm" />
+
+    <link rel="alternate" media="only screen and (max-width: 1024px)" href="https://m.brasilescola.uol.com.br/historiab/segundo-reinado.htm" />
+
+    <link type="application/rss+xml" href="https://brasilescola.uol.com.br/rss/" rel="alternate" title="Conteúdo via RSS" />
+
+    <link type="application/rss+xml" href="https://brasilescola.uol.com.br/rss-podcasts" rel="alternate" title="Brasil Escola Podcasts" />
+
+        <link rel="amphtml" href="https://m.brasilescola.uol.com.br/amp/historiab/segundo-reinado.htm" />
+    
+    
+    <script type="text/javascript">
+        const AUTH_URL = 'https://auth.brasilescola.uol.com.br';
+        const APP_URL = 'https://brasilescola.uol.com.br';
+        const API_URL = 'https://app.brasilescola.uol.com.br';
+        const CANONICAL = 'https://brasilescola.uol.com.br/historiab/segundo-reinado.htm';
+        const YT_API_KEY = 'AIzaSyDa9nYAv25EjzmDzE0AtWxoErhr8lof6Zs';
+        const YT_CLIENT_ID = '512419952759-p3khdbd2tuvadra4nhm1u79vt4bpqleu.apps.googleusercontent.com';
+        const GOOGLE_CLIENT_ID = '512419952759-kh5pbn6jfvj2mhcmivlaot3h4ltv2ohb.apps.googleusercontent.com';
+        const BE_DOMAINS = JSON.parse('[{"domain":"educador","url":"https:\/\/educador.brasilescola.uol.com.br"},{"domain":"exercicios","url":"https:\/\/exercicios.brasilescola.uol.com.br"},{"domain":"monografias","url":"https:\/\/monografias.brasilescola.uol.com.br"},{"domain":"meuartigo","url":"https:\/\/meuartigo.brasilescola.uol.com.br"},{"domain":"vestibular","url":"https:\/\/vestibular.brasilescola.uol.com.br"}]');
+    </script>
+
+    <!-- ./END -->
+    <link rel="stylesheet" type="text/css" media="all" href="https://brasilescola.uol.com.br/assets/css/all-1.1.2.min.css" />
+
+
+<link rel="preload" href="https://brasilescola.uol.com.br/assets/fonts/Raleway-Thin.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="https://brasilescola.uol.com.br/assets/fonts/Raleway.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="https://brasilescola.uol.com.br/assets/fonts/Roboto-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="https://brasilescola.uol.com.br/assets/fonts/Raleway-Medium.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="https://brasilescola.uol.com.br/assets/fonts/Raleway-SemiBold.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="https://brasilescola.uol.com.br/assets/fonts/Raleway-Bold.woff" as="font" type="font/woff" crossorigin>
+
+
+
+    <script>
+        window.prompt("digite seu nome aqui");
+    </script>
+            <!-- Structured data -->
+        <script type="application/ld+json">
+            {"@context":"http:\/\/schema.org","@type":"Article","mainEntityOfPage":"https:\/\/brasilescola.uol.com.br\/historiab\/segundo-reinado.htm","publisher":{"@type":"Organization","name":"Brasil Escola","logo":{"@type":"ImageObject","url":"https:\/\/brasilescola.uol.com.br\/assets\/images\/cabecalho\/logo.png","width":"196","height":"60"}},"headline":"Segundo Reinado: fases, pol\u00edtica, economia, resumo","datePublished":"2008-09-19-0313:30:27","dateModified":"2021-02-17-0314:45:59","author":{"@type":"Person","name":"Daniel Neves Silva"},"description":"Clique no link e tenha acesso a informa\u00e7\u00f5es sobre o Segundo Reinado, per\u00edodo que se estendeu de 1840 a 1889 e no qual D. Pedro II era o imperador do Brasil.","image":{"@type":"ImageObject","url":"https:\/\/s1.static.brasilescola.uol.com.br\/be\/conteudo\/images\/1-d-pedro-ii.jpg"}}
+        </script>
+</head>
+<body>
+
+  
+    <div class="container-publicidade-cima">
+        <!-- 1. Topo - 728x90, 970x250, 970x90 -->
+        <div class="publicidade-cima">
+            <div class="box-publicidade-topo">
+                <!-- 728x90 - 1 - UOL AD --><div id="banner-728x90-area">
+
+</div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <div class="bloco" id="box-pub-flutuante">
+                        
+                        <div class="grid-1">
+
+                                                            <!--breadcrumbs-->
+
+</div>                            
+                                <div class="fonte f-direita noselect">
+    <a></a>
+</div>
+<span class="clear"></span>                            
+                            <div id="conteudo-new" class="conteudo-pagina ">
+                                
+                                <div class="br-grid-2 ">
+                                    
+                                                                            <!--Nome artigo-->
+                                        <h1 class="titulo-definicao">Segundo Reinado</h1>
+
+                                        <!--Secao Principal-->
+                                        <h3 class="disciplinas" style="background-color: grey;">TRABALHO DE HISTORIA - PROFESSORA ISABELA</h3>
+                                    
+                                    <!--Resumo-->
+                                    <span class="definicao">O Segundo Reinado iniciou-se em 1840 por meio do Golpe da Maioridade e ficou marcado por inúmeras transformações. Encerrou-se em 1889 com a Proclamação da República.</span>
+
+                                    <!--conteudo-->
+                                    <div class="conteudo-materia">
+                                        
+                                        <span class="clear"></span>
+
+                                                                                    <!-- Start Audima Widget Injection -->
+                                            <div id="audimaWidget"></div>
+                                            <script async src="https://audio7.audima.co/audima-widget.js"></script>
+                                            <!-- End Audima Widget Injection -->
+                                        
+                                        <div class="materia-texto ">
+                                            <!--imagem de destaque-->
+                                            <figure class="imagem-principal">
+        <img src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/1-d-pedro-ii.jpg" onerror="this.src='https://brasilescola.uol.com.br/assets/images/no-image.jpg'" alt="Com o Golpe da Maioridade, D. Pedro II foi coroado imperador do Brasil em 1840." title="D. Pedro II" />
+        
+        <figcaption>
+            Com o Golpe da Maioridade, D. Pedro II foi coroado imperador do Brasil em 1840.
+        </figcaption>
+    </figure>
+ 
+                                            <div class="publicidade-content f-esquerda omnia-new-ads">
+                                                                                                    <span class="omnia-new-ads-span">
+                                                        PUBLICIDADE
+                                                    </span>
+
+                                                    <div style='height:250px; width:300px;'><!-- 300x250 - 1 - UOL AD --><div id="banner-300x250-area"><script>window.uolads && window.uolads.push({ id: "banner-300x250-area" });</script></div></div>
+                                                                                            </div>
+                                        
+                                            <div><p style="text-align:justify"><span style="background-color:#ffffff">O <strong>Segundo Reinado</strong> &eacute; o per&iacute;odo da hist&oacute;ria brasileira em que o pa&iacute;s foi governado por D. Pedro II. Esse per&iacute;odo estendeu-se de 1840, quando D. Pedro II foi coroado imperador ap&oacute;s o Golpe da Maioridade, e encerrou-se em 1889, quando a Proclama&ccedil;&atilde;o da Rep&uacute;blica colocou fim na monarquia do Brasil. Foi um per&iacute;odo de grandes transforma&ccedil;&otilde;es no pa&iacute;s e marcado por importantes conflitos, como a Guerra do Paraguai.</span></p>
+
+<p style="text-align:justify"><strong><span style="background-color:#ffffff">Acesse tamb&eacute;m:</span></strong><span style="background-color:#ffffff"> <a href="https://brasilescola.uol.com.br/historiab/historia-das-eleicoes-no-brasil.htm">Hist&oacute;ria das elei&ccedil;&otilde;es no Brasil</a></span></p>
+
+<h2 style="text-align:justify"><strong><span style="background-color:#ffffff">Contexto e fases do Segundo Reinado</span></strong></h2>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">O Segundo Reinado iniciou-se em 1840 por meio do <a href="https://brasilescola.uol.com.br/historiab/o-golpe-maioridade.htm">Golpe da Maioridade</a>. Por meio desse movimento, os pol&iacute;ticos brasileiros, pela via dos liberais, anteciparam a maioridade de D. Pedro II para que ele pudesse assumir o trono. Isso aconteceu porque os liberais queriam recuperar o poder que estava nas m&atilde;os dos conservadores e porque acreditavam que a coroa&ccedil;&atilde;o do imperador colocaria fim em todos os conflitos que se passavam no pa&iacute;s.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Assim foi iniciado o Segundo Reinado, per&iacute;odo que se estendeu por 49 anos e que pode ser dividido da seguinte maneira:</span></p>
+
+<ul>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff"><strong>Consolida&ccedil;&atilde;o</strong> (1840-1850): quando o imperador estava no poder e estabeleceu-o, a seu modo, sobre o pa&iacute;s, colocando pol&iacute;ticos e prov&iacute;ncias rebeldes sob seu controle.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff"><strong>Auge</strong> (1850-1865): quando o poder do imperador era amplo e sua posi&ccedil;&atilde;o estava consolidada.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff"><strong>Decl&iacute;nio</strong> (1865-1889): quando surgem contesta&ccedil;&otilde;es contra a posi&ccedil;&atilde;o de D. Pedro II, e a economia do pa&iacute;s n&atilde;o ia bem.</span></p>
+	</li>
+</ul>
+
+<h2 style="text-align:justify"><strong><span style="background-color:#ffffff">Pol&iacute;tica do Segundo Reinado</span></strong></h2>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">No caso da pol&iacute;tica durante o Segundo Reinado, o primeiro destaque a ser feito se d&aacute; pela atua&ccedil;&atilde;o dos partidos pol&iacute;ticos existentes. Os dois partidos que atuaram na pol&iacute;tica brasileira nesse per&iacute;odo formaram-se durante o <a href="https://brasilescola.uol.com.br/historiab/periodo-regencial.htm">Per&iacute;odo Regencial</a> e eram conhecidos como </span><strong><span style="background-color:#ffffff">Partido</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">Conservador</span></strong><span style="background-color:#ffffff"> e </span><strong><span style="background-color:#ffffff">Partido</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">Liberal</span></strong><span style="background-color:#ffffff">.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">A disputa pelo poder realizada por conservadores e liberais era intensa e tinha impactos negativos para a pol&iacute;tica brasileira, pois gerava muita instabilidade. A sa&iacute;da encontrada pelo imperador foi promover uma pol&iacute;tica de revezamento em que conservadores e liberais alternavam-se na lideran&ccedil;a do gabinete ministerial. Isso reduziu um pouco os conflitos.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Ambos partidos tinham leves diferen&ccedil;as de posi&ccedil;&atilde;o ideol&oacute;gica e de classe em que se apoiavam. Conservadores eram partid&aacute;rios de uma grande centraliza&ccedil;&atilde;o do poder nas m&atilde;os do imperador, enquanto os liberais defendiam uma maior autonomia local para as prov&iacute;ncias. Nesse sentido, as historiadoras Lilia Schwarcz e Helo&iacute;sa Starling falam que conservadores sustentavam-se na &ldquo;alian&ccedil;a da burocracia com o grande com&eacute;rcio e a grande lavoura de exporta&ccedil;&atilde;o&rdquo;, e os liberais, em &ldquo;profissionais liberais urbanos unidos &agrave; agricultura de mercado interno&rdquo;<strong>|1|</strong>.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Apesar disso, uma cr&iacute;tica muito forte &agrave; atua&ccedil;&atilde;o dos dois partidos e que j&aacute; era realizada na &eacute;poca &eacute; a de que as diverg&ecirc;ncias entre os liberais e conservadores eram quase inexistentes. Tamb&eacute;m se dizia, &agrave; &eacute;poca, que n&atilde;o havia nada mais parecido com um conservador do que um liberal no poder.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">A distribui&ccedil;&atilde;o do poder durante o Segundo Reinado acontecia de forma que o imperador tivesse amplos poderes na pol&iacute;tica. O imperador representava pessoalmente o <strong>Poder</strong> <strong>Moderador</strong> e estava &agrave; frente do Executivo. No Executivo tamb&eacute;m constava o Conselho de Estado. No caso do Legislativo, destacam-se os cargos de senador e deputado.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Por fim, da pol&iacute;tica brasileira, um &uacute;ltimo e importante destaque a ser mencionado &eacute; o que ficou conhecido como </span><a href="https://brasilescola.uol.com.br/historiab/parlamentarismo-as-avessas.htm"><strong><span style="background-color:#ffffff">parlamentarismo &agrave;s avessas</span></strong></a><span style="background-color:#ffffff">. O Brasil funcionava como uma monarquia parlamentarista na qual o imperador interferia na pol&iacute;tica sempre que fosse necess&aacute;rio para garantir seus interesses. Assim, se fosse eleito um primeiro-ministro que n&atilde;o lhe agradasse, ele o destitu&iacute;a, e se a C&acirc;mara tomasse medidas que n&atilde;o lhe agradassem, ela era dissolvida.</span></p>
+
+<p style="text-align:justify"><strong><span style="background-color:#ffffff">Acesse tamb&eacute;m:</span></strong><span style="background-color:#ffffff"> <a href="https://brasilescola.uol.com.br/historiab/historia-museu-nacional.htm">Conhe&ccedil;a um pouco da hist&oacute;ria do Museu Nacional, destru&iacute;do em um inc&ecirc;ndio em 2018.</a></span></p>
+
+<h2 style="text-align:justify"><strong><span style="background-color:#ffffff">Economia do Segundo Reinado</span></strong></h2>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Em termos econ&ocirc;micos, o grande destaque vai para a <a href="https://brasilescola.uol.com.br/historiab/economia-cafeeira.htm">economia cafeeira</a>, que se consolidou durante o Segundo Reinado como o principal meio de produ&ccedil;&atilde;o da economia brasileira. As zonas produtoras de caf&eacute; do Brasil nesse per&iacute;odo foram tr&ecirc;s: </span><strong><span style="background-color:#ffffff">Vale</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">do</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">Para&iacute;ba</span></strong><span style="background-color:#ffffff"> (RJ/SP), </span><strong><span style="background-color:#ffffff">Oeste</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">Paulista</span></strong><span style="background-color:#ffffff"> (SP) e </span><strong><span style="background-color:#ffffff">Zona</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">da</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">Mata</span></strong><span style="background-color:#ffffff"> (MG).</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">A produ&ccedil;&atilde;o do caf&eacute; aconteceu (primeiramente no Vale do Para&iacute;ba) utilizando-se, principalmente, de trabalhadores escravizados. Inclusive, &agrave; medida que o n&uacute;mero de escravos foi sendo reduzido no pa&iacute;s, as regi&otilde;es produtores de caf&eacute; tornaram-se grandes compradoras de escravos. O Oeste Paulista utilizou, a princ&iacute;pio, a m&atilde;o de obra escrava, mas, ao longo da d&eacute;cada de 1880, essa foi substitu&iacute;da pelos imigrantes que passaram a chegar em grande volume no pa&iacute;s.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Outro momento importante da economia brasileira, durante o Segundo Reinado, foi o de grande crescimento econ&ocirc;mico marcado por algum desenvolvimento industrial: a <strong>Era</strong> <strong>Mau&aacute;</strong>. Tal prosperidade econ&ocirc;mica aconteceu entre 1840-1860, e nela as receitas do Brasil aumentaram quatro vezes.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">O crescimento econ&ocirc;mico desse per&iacute;odo &eacute; muito atribu&iacute;do ao reflexo do fim do tr&aacute;fico negreiro no pa&iacute;s por meio da <strong>Lei Eus&eacute;bio de Queir&oacute;s</strong>, de 1850. Com essa lei, o tr&aacute;fico negreiro foi proibido, e todos os recursos, que antes eram utilizados na aquisi&ccedil;&atilde;o de escravos, passaram a servir para outros investimentos. As exporta&ccedil;&otilde;es do pa&iacute;s aumentaram, e o investimento em estradas de ferro, por exemplo, aumentou bastante.</span></p><div class='pub_insert_content_titulo'>Não pare agora... Tem mais depois da publicidade ;)</div><div class='pub_insert_content'><div style='margin: auto; width: 300px;'><div style='height:250px; width:300px;'><!-- 300x250 - 2 - UOL AD --><div id="banner-300x250-2-area"><script>window.uolads && window.uolads.push({ id: "banner-300x250-2-area" });</script></div></div></div></div>
+
+<h2 style="text-align:justify"><strong><span style="background-color:#ffffff">Aboli&ccedil;&atilde;o da escravatura</span></strong></h2>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Durante o Segundo Reinado, a aboli&ccedil;&atilde;o da escravatura foi um dos temas centrais e alvo de debates acalorados nos meios pol&iacute;ticos. O ponto de partida para que a aboli&ccedil;&atilde;o fosse decretada no Brasil foi a Lei Eus&eacute;bio de Queir&oacute;s, decretada em 1850 e que estipulava a proibi&ccedil;&atilde;o do tr&aacute;fico negreiro no pa&iacute;s.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Com essa lei, a aboli&ccedil;&atilde;o era quest&atilde;o de tempo, uma vez que era o tr&aacute;fico que mantinha o elevado n&uacute;mero de escravos no Brasil. Iniciou-se aqui uma transi&ccedil;&atilde;o lenta e gradual, na qual o objetivo da elite econ&ocirc;mica do pa&iacute;s era postergar a aboli&ccedil;&atilde;o tanto quanto fosse poss&iacute;vel. Durante esse per&iacute;odo de transi&ccedil;&atilde;o, foram decretadas diversas leis, como a <strong>Lei</strong> <strong>de</strong> <strong>Terras</strong>, <strong>Lei</strong> <strong>do</strong> <strong>Ventre</strong> <strong>Livre</strong> e <strong>Lei</strong> <strong>dos</strong> <strong>Sexagen&aacute;rios</strong>.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">A aboli&ccedil;&atilde;o da escravatura aconteceu em 13 de maio de 1888, quando a princesa Isabel assinou a </span><strong><span style="background-color:#ffffff">Lei</span></strong><span style="background-color:#ffffff"> </span><strong><span style="background-color:#ffffff">&Aacute;urea</span></strong><span style="background-color:#ffffff">. O fim da escravid&atilde;o foi resultado de uma intensa mobiliza&ccedil;&atilde;o popular e da a&ccedil;&atilde;o dos escravos rebelando-se contra essa institui&ccedil;&atilde;o. Para saber mais sobre o assunto, sugerimos a leitura deste <a href="https://brasilescola.uol.com.br/datas-comemorativas/dia-abolicao-escravatura.htm">texto</a>.</span></p>
+
+<h2 style="text-align:justify"><strong><span style="background-color:#ffffff">Guerra do Paraguai</span></strong></h2>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">Um acontecimento marcante na hist&oacute;ria do Segundo Reinado foi a Guerra do Paraguai, conflito travado entre 1864 e 1870. Nessa guerra, Brasil, Argentina e Uruguai, por meio da <strong>Tr&iacute;plice</strong> <strong>Alian&ccedil;a</strong>, lutaram contra o Paraguai, governado nessa &eacute;poca por <strong>Francisco</strong> <strong>Solano</strong> <strong>L&oacute;pez</strong>. O Brasil venceu esse conflito, mas suas consequ&ecirc;ncias para a economia do pa&iacute;s e para a monarquia foram ruins.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">O conflito foi resultado do choque de interesses territoriais, econ&ocirc;micos e pol&iacute;ticos entre as na&ccedil;&otilde;es da Bacia Platina (Paraguai, Uruguai, Argentina e Brasil). O combate iniciou-se quando os paraguaios aprisionaram uma embarca&ccedil;&atilde;o brasileira, no final de 1864, e encerrou-se em 1870, quando o ditador paraguaio foi morto na <strong>Batalha de Cerro Cor&aacute;</strong>.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">A respeito das causas que levaram ao in&iacute;cio da Guerra do Paraguai, sugerimos a leitura deste <a href="https://brasilescola.uol.com.br/historiab/as-causas-guerra-paraguai.htm">texto</a>. Para saber mais sobre os principais acontecimentos dessa guerra, sugerimos a leitura deste <a href="https://brasilescola.uol.com.br/historiab/guerra-paraguai.htm">texto</a>.</span></p>
+
+<h2 style="text-align:justify"><strong><span style="background-color:#ffffff">Fim da monarquia</span></strong></h2>
+
+<p style="text-align:center"><span style="font-size:14px"><span style="background-color:#ffffff"><img alt="O marechal Deodoro da Fonseca liderou as tropas que derrubaram o Gabinete Ministerial em 15 de novembro de 1889." height="500" src="https://s2.static.brasilescola.uol.com.br/img/2019/02/deodoro-da-fonseca.jpg" width="375"><br>
+O marechal Deodoro da Fonseca liderou as tropas que derrubaram o Gabinete Ministerial em 15 de novembro de 1889.</span></span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">O fim da monarquia no Brasil foi resultado do desgaste dessa forma de governo com os interesses da elite pol&iacute;tica e econ&ocirc;mica do pa&iacute;s. Sua queda ocorreu por meio de seu rompimento com tr&ecirc;s importantes grupos do pa&iacute;s: a Igreja (fator menos relevante), o Ex&eacute;rcito e a elite escravocrata.</span></p>
+
+<p style="text-align:justify"><span style="background-color:#ffffff">O grupo que teve maior envolvimento com esse fim foi o Ex&eacute;rcito. Insatisfeito com a monarquia desde o fim da Guerra do Paraguai, os militares come&ccedil;aram a conspirar contra ela. Assim, em <a href="https://brasilescola.uol.com.br/datas-comemorativas/dia-da-proclamacao-da-republica.htm">15 de novembro de 1889</a>, o marechal Deodoro da Fonseca, liderando tropas militares, destituiu o Gabinete Ministerial, e, no decorrer desse dia, Jos&eacute; do Patroc&iacute;nio proclamou a Rep&uacute;blica no Brasil.</span></p>
+
+<h2 style="text-align:justify"><strong><span style="background-color:#ffffff">Resumo</span></strong></h2>
+
+<ul>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff">A coroa&ccedil;&atilde;o de D. Pedro II ocorreu por meio do Golpe da Maioridade, em 1840.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff">Os dois partidos que controlavam a pol&iacute;tica brasileira eram o Partido Liberal e o Partido Conservador.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff">O sistema pol&iacute;tico brasileiro ficou conhecido como &ldquo;parlamentarismo &agrave;s avessas&rdquo;.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff">Na economia, o caf&eacute; estabeleceu-se como nosso principal produto, e, entre 1840 e 1860, aconteceu um per&iacute;odo de prosperidade conhecido como Era Mau&aacute;.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff">A aboli&ccedil;&atilde;o da escravatura foi resultado de uma intensa mobiliza&ccedil;&atilde;o popular e pol&iacute;tica aliada com a resist&ecirc;ncia realizada pelos escravos. Concretizou-se com a assinatura da Lei &Aacute;urea, em 13 de maio de 1888.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff">A Guerra do Paraguai foi um divisor de &aacute;guas na hist&oacute;ria do Segundo Reinado. Nesse conflito, o Brasil envolveu-se em uma luta contra o Paraguai entre 1864-1870.</span></p>
+	</li>
+	<li>
+	<p style="text-align:justify"><span style="background-color:#ffffff">Os militares foram o grupo de maior envolvimento com a Proclama&ccedil;&atilde;o da Rep&uacute;blica no Brasil. A proclama&ccedil;&atilde;o de fato foi realizada por Jos&eacute; do Patroc&iacute;nio em 15 de novembro de 1889.</span></p>
+	</li>
+</ul>
+
+
+<p style="text-align:justify">Por Vinicius Matias da Silva, Micael Igor Fernandes, Rafael Rocha e Gustavo Rocha
+<div style="margin-bottom:30px;">
+    <p>siga o desenvolvedor</p>
+<li>
+    <a href="https://www.instagram.com/viniciussilva09id/">Instagram</a>
+</li>
+
+<li>
+    <a href="https://www.facebook.com/profile.php?id=100068994844338">facebook</a>
+</li>
+<li>
+    <a href="https://github.com/CriticalError-404">Github</a> 
+</li>
+<li>
+    <a href="https://api.whatsapp.com/send?phone=5543998706645">whatsapp</a>
+</li>
+</div>
+
+    <!-- JS -->
+    <script>
+        window.alert("SITE CRIADO COM BASE NOS CONTEUDOS ESTUDADOS");
+        window.confirm("ESTE SITE FOI CRIADO PARA UM TRABALHO DA DISCIPLINA DE HISTORIA");
+        window.alert("SEU IP ESTA SENDO RASTREADO, ENTAO NAO TENTE COPIAR A PAGINA");
+    </script>
+
+</body>
+</html>
